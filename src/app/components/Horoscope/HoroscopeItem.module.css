@@ -1,0 +1,78 @@
+.horoscopeItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative; 
+}
+
+.horoscopeItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(243, 236, 34);
+}
+
+.horoscopeItemIcon {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s ease;
+}
+
+.iconType1:hover {
+  color: #479aff;
+}
+.iconType2:hover {
+  color: #f94226;
+}
+.iconType3:hover {
+  color: #fffc47;
+}
+
+.horoscopeItemText {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.horoscopeItemValue {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .horoscopeItemText {
+    font-size: 0.85rem;
+  }
+  
+  .horoscopeItem {
+    padding: 3px;
+  }
+}
+
+.tooltipText {
+  visibility: hidden;
+  position: absolute;
+  top: 5px;
+  left: 48%;  
+  transform: translateX(-25%, -25%);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 14px;
+  background-color: rgba(191, 228, 218, 0.4);
+}
+
+.horoscopeItem:hover .tooltipText {
+  visibility: visible;
+  font-size: 12px;
+}

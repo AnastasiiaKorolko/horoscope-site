@@ -1,0 +1,357 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.formContainer {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .formContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(135deg, #054537, #4eb99b 30%, #3c049d);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(22, 22, 22);
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card {
+  flex: 1 1 100%;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  border: 1px solid #4eb99b;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 480px) {
+  .card {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+  }
+}
+
+@media (min-width: 992px) {
+  .calendar {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .card {
+    flex: 0 0 90px;
+    max-width: 90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .calendar {
+    flex-wrap: nowrap;
+    
+  }
+  
+  .card {
+    flex: 0 0 115px;
+    min-width: 115px;
+    margin-bottom: 0;
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 40px;
+  margin-bottom: 10px;
+  color: #03214b;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cardFooter {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.catFact {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(238, 238, 237, 0.3);
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .catFact {
+    font-size: 1rem;
+  }
+}
+
+.zodiacInfoContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .zodiacInfoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+  }
+}
+
+.zodiacImageContainer {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+  min-height: 150px;
+}
+
+@media (min-width: 768px) {
+  .zodiacImageContainer {
+    max-width: 200px;
+    width: 100%;
+  }
+}
+
+.zodiacImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.zodiacTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .zodiacTextContainer {
+    text-align: left;
+  }
+}
+
+.shareButtonContainer {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.shareButton {
+  padding: 12px 24px;
+  background-color: #7375e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(115, 117, 232, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.shareButton:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, #7375e8, #efe272, #7375e8);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.shareButton:hover {
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(115, 117, 232, 0.3);
+}
+
+.shareButton:hover:before {
+  transform: translateX(50%);
+}
+
+.shareButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(115, 117, 232, 0.2);
+}
+
+.bestScoreContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  color: #ebdb4e;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .bestScoreContainer {
+    justify-content: flex-start;
+  }
+}
+
+.bestScoreContainer img {
+  margin-right: 10px;
+}
+
+.selectZodiac {
+  border: 1px solid #4eb99b;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .formWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.selectContainer {
+  width: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .buttonContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .selectContainer, .buttonContainer {
+    width: auto;
+  }
+  
+  .buttonContainer {
+    gap: 20px;
+  }
+}
+
+
+
