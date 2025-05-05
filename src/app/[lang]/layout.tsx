@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "../../globals.css"; // Шлях до глобального стилю
+import "../../app/globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,7 +14,6 @@ export const metadata = {
   },
 };
 
-// Правильний тип для layout в app router
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: {
