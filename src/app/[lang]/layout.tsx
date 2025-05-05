@@ -15,19 +15,23 @@ export const metadata = {
   },
 };
 
-export default async function LocaleLayout(props: Readonly<{
+export default function LocaleLayout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
   params: { lang: string };
-}>) {
-  const { lang } = props.params;
+}) {
+  const { lang } = params;
 
   return (
     <html lang={lang}>
       <body className={`${inter.variable}`}>
-        {props.children}
+        {children}
       </body>
     </html>
   );
 }
+
 
 
