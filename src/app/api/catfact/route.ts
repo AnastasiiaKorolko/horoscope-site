@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+export const revalidate = 60;
 
 export async function GET() {
   try {
@@ -13,12 +15,12 @@ export async function GET() {
       headers: { 'Content-Type': 'application/json'},
     });
   } catch (error: unknown) {
-    
     if (error instanceof Error) {
       return new Response(
-        JSON.stringify({ error: 'Не вдася отримати факт про кота', details: error.message }),
+        JSON.stringify({ error: 'Не вдалося отримати факт про кота', details: error.message }),
         { status: 500, headers: { "Content-Type": 'application/json' }}
       );
     }
   }
 }
+

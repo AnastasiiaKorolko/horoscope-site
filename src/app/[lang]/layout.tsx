@@ -1,8 +1,13 @@
 import { Inter, Roboto } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin", "cyrillic"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin", "cyrillic"],
 });
 
@@ -14,16 +19,19 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default async function LocaleLayout(props: Readonly<{
   children: React.ReactNode;
+  params: { lang: string };
 }>) {
+  const { lang } = props.params;
+
   return (
-    <html>
+    <html lang={lang}>
       <body className={`${inter.variable}`}>
-        {children}
+        {props.children}
       </body>
     </html>
   );
 }
+
+

@@ -5,9 +5,9 @@ import { HoroscopeItem } from './HoroscopeItem';
 import { HoroscopeDetailProps } from '@/types/horoscopeDetail';
 import { BestScore } from '@/types/horoscopeDetail';
 import { HoroscopeData } from '@/types/horoscope';
+import Image from 'next/image';
 
-
-const bestImages = { Best: "/images/star.png"}
+const bestImages = { Best: "/images/star.png" };
 
 const HoroscopeDetail = ({ selectedDay, selectedSign, zodiacImages }: HoroscopeDetailProps) => {
   const getBestScore = (data: HoroscopeData): BestScore => {
@@ -26,31 +26,37 @@ const HoroscopeDetail = ({ selectedDay, selectedSign, zodiacImages }: HoroscopeD
     return { label: bestScoreLabel, icon: bestScoreIcon };
   }
 
-  const best = getBestScore(selectedDay)
+  const best = getBestScore(selectedDay);
 
   return (
     <div className={styles.zodiacInfoContainer}>
       <div className={styles.zodiacImageContainer}>
-              <img
-               src={zodiacImages[selectedSign]}
-               alt={`Зображення настрою для ${selectedSign}`}
-               className={styles.zodiacImage}
-              />
-            </div>
-            <div className={styles.zodiacTextContainer}>
-              <h3>{selectedDay.date}</h3>
-              <div>
-                <HoroscopeItem label="Здоров'я" value={selectedDay.health} icon={<GiHealthNormal size={18} />} isDetailed={true} />
-                <HoroscopeItem label="Стосунки" value={selectedDay.relationships} icon={<GiHeartBeats size={18} />} isDetailed={true} />
-                <HoroscopeItem label="Кар'єра" value={selectedDay.career} icon={<GiTie size={18} />} isDetailed={true} />
-              </div>
-              <div className={styles.bestScoreContainer}>
-              <img src={best.icon} alt="Найкраща сфера"  style={{ width: 24, height: 24 }}/>
-              <span>Найкраща сфера: {best.label}</span>
-                
-              </div>
-            </div>
-          </div>
+        <Image
+          src={zodiacImages[selectedSign]}
+          alt={`Зображення настрою для ${selectedSign}`}
+          className={styles.zodiacImage}
+          width={200}
+          height={200}
+        />
+      </div>
+      <div className={styles.zodiacTextContainer}>
+        <h3>{selectedDay.date}</h3>
+        <div>
+          <HoroscopeItem label="Здоров'я" value={selectedDay.health} icon={<GiHealthNormal size={18} />} isDetailed={true} />
+          <HoroscopeItem label="Стосунки" value={selectedDay.relationships} icon={<GiHeartBeats size={18} />} isDetailed={true} />
+          <HoroscopeItem label="Кар'єра" value={selectedDay.career} icon={<GiTie size={18} />} isDetailed={true} />
+        </div>
+        <div className={styles.bestScoreContainer}>
+          <Image
+            src={best.icon}
+            alt="Найкраща сфера"
+            width={24}
+            height={24}
+          />
+          <span>Найкраща сфера: {best.label}</span>
+        </div>
+      </div>
+    </div>
   )
 }
 

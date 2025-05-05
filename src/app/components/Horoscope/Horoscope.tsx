@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { HoroscopeForm } from "./HoroscopeForm";
 import { fetchCatFact } from "../../Utils/utils";
 import { ZodiacSign, HoroscopeData } from "../../../types/horoscope";
+import Image from "next/image";
 
 import styles from "./Horoscope.module.css";
 import HoroscopeCalendar from "./HoroscopeCalendar";
@@ -119,7 +120,7 @@ export const Horoscope = () => {
       {selectedSign && (
     <>
     <span>{selectedSign}</span>
-    <img src={zodiacImages[selectedSign]} alt={`${selectedSign} зодіак`} style={{ width: 60, height: 60 }} />
+    <Image src={zodiacImages[selectedSign]} alt={`${selectedSign} зодіак`} style={{ width: 60, height: 60 }} />
     </>
     )}
           </h2>

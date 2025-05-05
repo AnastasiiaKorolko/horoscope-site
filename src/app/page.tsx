@@ -1,17 +1,6 @@
-import { Horoscope } from "./components/Horoscope/Horoscope";
-import { ThemeSwitch } from "./components/Layout/ThemeSwitch";
-import styles from './components/Layout/ThemeSwitch.module.css';
-import StarrySkyWrapper from "./components/StarrySWrapper";
+import { redirect } from 'next/navigation';
 
-export default function HomePage() {
-  return (
-    <div>
-      <StarrySkyWrapper />
-      <header className={styles.switch}>
-      <ThemeSwitch />
-      </header>
-      <Horoscope />
-    </div>
-  );
+export default function RootPage() {
+  redirect('/en'); // Перенаправлення на англійську версію
+  return null;
 }
-
