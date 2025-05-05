@@ -1,3 +1,3 @@
-#Demo
+# Horoscope App
 
-[Demo on Vercel](horoscope-app-liart.vercel.app)
+Demo: [horoscope-app-liart.vercel.app](https://horoscope-app-liart.vercel.app)
