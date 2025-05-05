@@ -63,7 +63,7 @@ export const Horoscope = () => {
         });
       } 
     }
-  }, [horoscopeData]);
+  }, [horoscopeData, selectedSign, days]);
 
   const generateHoroscopeData = (sign: ZodiacSign, days: number): HoroscopeData[] => {
     const data: HoroscopeData[] = [];

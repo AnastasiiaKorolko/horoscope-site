@@ -13,7 +13,7 @@ const HoroscopeDetail = ({ selectedDay, selectedSign, zodiacImages }: HoroscopeD
   const getBestScore = (data: HoroscopeData): BestScore => {
     const best = Math.max(data.health, data.relationships, data.career);
     let bestScoreLabel = '';
-    let bestScoreIcon = bestImages.Best;
+    const bestScoreIcon = bestImages.Best;
 
     if (best === data.health) {
       bestScoreLabel = "Здоров'я";
