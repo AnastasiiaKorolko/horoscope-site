@@ -57,7 +57,7 @@ export const Horoscope = () => {
       if (cashedFact) {
         setCatFact(cashedFact);
       } else {
-        fetchCatFact(horoscopeData[0].avgHealth).then((fact) => {
+        fetchCatFact().then((fact) => {
           setCatFact(fact);
           localStorage.setItem(factDay, fact);
         });
@@ -114,7 +114,11 @@ export const Horoscope = () => {
 
   return (
     <>
-    <div className={styles.pageWrapper}>
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className={styles.pageWrapper}>
       <div className={styles.formContainer}>
       <h2 className={styles.title}>
       {selectedSign && (
@@ -142,6 +146,8 @@ export const Horoscope = () => {
           <p className={styles.catFact}>Факт про котів: {catFact}</p>
           <HoroscopeShareButtom selectedSign={selectedSign}/>
         </div>
+      )}
+    </div>
       )}
     </div>
 

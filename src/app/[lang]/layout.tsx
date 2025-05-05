@@ -6,10 +6,6 @@ const inter = Inter({
   subsets: ["latin", "cyrillic"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin", "cyrillic"],
-});
 
 export const metadata = {
   title: "ГОРОСКОПІЯ",
