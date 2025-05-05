@@ -8,7 +8,6 @@ export async function GET(
 ) {
   const lang = params.lang;
   try {
-    // Шлях до локалізаційних файлів
     const filePath = path.join(process.cwd(), 'src', 'i18n', 'locales', lang, 'common.json');
     const data = fs.readFileSync(filePath, 'utf8');
     return NextResponse.json(JSON.parse(data));
