@@ -16,16 +16,12 @@ export const metadata = {
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: {
-    lang: string;
-  };
 }
 
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { lang } = params;
+export default function LocaleLayout({ children }: LocaleLayoutProps) {
 
   return (
-    <html lang={lang}>
+    <html >
       <body className={inter.variable}>{children}</body>
     </html>
   );

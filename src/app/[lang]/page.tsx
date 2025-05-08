@@ -3,7 +3,6 @@ import { ThemeSwitch } from "../components/Layout/ThemeSwitch";
 import styles from '../components/Layout/ThemeSwitch.module.css';
 import StarrySkyWrapper from "../components/StarrySWrapper";
 
-// Визначаємо які локалі підтримуємо
 export function generateStaticParams() {
   return [
     { lang: 'en' },
@@ -20,7 +19,7 @@ export default async function HomePage(props: { params: { lang: string } }) {
       <header className={styles.switch}>
         <ThemeSwitch />
       </header>
-      <Horoscope lang={lang} />
+      <Horoscope />
     </div>
   );
 }

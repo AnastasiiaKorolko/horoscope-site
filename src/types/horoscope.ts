@@ -1,4 +1,5 @@
-export type ZodiacSign = "Овен" | "Телець" | "Близнюки" | "Рак" | "Лев" | "Діва" | "Терези" | "Скорпіон" | "Стрілець" | "Козеріг" | "Водолій" | "Риби";
+export type ZodiacSign = "Aries" | "Taurus" | "Gemini" | "Cancer" | "Leo" | "Virgo" | "Libra" | "Scorpio" | "Sagittarius" | "Capricorn" | "Aquarius" | "Pisces";
+
 
 export type HoroscopeData = {
   sign: ZodiacSign;
